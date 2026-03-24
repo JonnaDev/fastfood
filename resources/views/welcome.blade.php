@@ -1,88 +1,74 @@
-@extends('layouts.head')
-@section('tittle', 'Pagina principal')
+@extends('layouts.app')
 @section('content')
-            <div class="w-full min-h-[80vh] md:max-h-[60vh] bg-linear-to-br from-orange-400 to-orange-600 flex items-center justify-center mb-5">
-                <div class="text-center text-white px-6 max-w-2xl">
-                    <h1 class="text-5xl font-bold mb-4 leading-tight">
-                        La mejor comida rápida
-                    </h1>
-                    <p class="text-xl mb-8 opacity-90">
-                        Pide desde donde estés. Rápido, fresco y delicioso.
-                    </p>
-                    <a href="#" class="inline-block bg-white text-orange-500 font-semibold px-8 py-3 rounded-full hover:bg-orange-50 transition-colors shadow-md">
-                        Ver menú →
-                    </a>
-                </div>
-            </div>
+         <div class="w-full min-h-[80vh] md:max-h-[60vh] bg-linear-to-br from-orange-400 to-orange-600 flex items-center justify-center mb-5">
+             <div class="text-center text-white px-6 max-w-2xl">
+                 <h1 class="text-5xl font-bold mb-4 leading-tight">
+                     La mejor comida rápida
+                 </h1>
+                 <p class="text-xl mb-8 opacity-90">
+                     Pide desde donde estés. Rápido, fresco y delicioso.
+                 </p>
+                 <a href="#" class="inline-block bg-white text-orange-500 font-semibold px-8 py-3 rounded-full hover:bg-orange-50 transition-colors shadow-md">
+                     Ver menú →
+                 </a>
+             </div>
+         </div>
+         <section id="about-us" class="py-16 px-6 bg-white">
+             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">¿Quiénes somos?</h2>
+             <p class="text-center text-gray-500 mb-12 max-w-xl mx-auto">
+                 Somos un equipo apasionado por llevar sabor y calidad a tu puerta en tiempo récord.
+             </p>
+             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                 {{-- Tarjeta 1: Misión --}}
+                 <div class="bg-orange-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                     <div class="text-5xl mb-4">🍔</div>
+                     <h3 class="text-xl font-bold text-gray-800 mb-3">Nuestra Misión</h3>
+                     <p class="text-gray-600 text-sm leading-relaxed">
+                         Llevamos sabor y rapidez a cada rincón. Creemos que la buena comida no debe hacerte esperar.
+                     </p>
+                 </div>
+                 {{-- Tarjeta 2: Calidad --}}
+                 <div class="bg-orange-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                     <div class="text-5xl mb-4">⭐</div>
+                     <h3 class="text-xl font-bold text-gray-800 mb-3">Nuestra Calidad</h3>
+                     <p class="text-gray-600 text-sm leading-relaxed">
+                         Ingredientes frescos seleccionados cada día. Sin compromisos en el sabor ni en la presentación.
+                     </p>
+                 </div>
+                 {{-- Tarjeta 3: Promesa --}}
+                 <div class="bg-orange-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                     <div class="text-5xl mb-4">🚀</div>
+                     <h3 class="text-xl font-bold text-gray-800 mb-3">Nuestra Promesa</h3>
+                     <p class="text-gray-600 text-sm leading-relaxed">
+                         Entrega en menos de 30 minutos o tu próximo pedido tiene descuento. Así de seguros estamos.
+                     </p>
+                 </div>
+             </div>
+         </section>
+        
+         <section id="our-services" class="py-15 px-5 bg-white mt-5">
+             <h2 class="text-5xl text-center text-sky-500 mb-12 max-w-xl mx-auto">Nuestros Servicios Principales</h2>
+             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                     <div class="bg-sky-100 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                         <i class="fa-solid fa-truck fa-xl" style="color:lightskyblue"></i>
+                         <h3 class="text-xl font-bold text-gray-800 m-3">Envio a Domicilio</h3>
+                         <p class="text-gray-600 font-bold text-sm leading-relaxed">Nos especializamos en envios a Domicilios en toda la región de Neiva.</p>
+                     </div>
+                     
+                     <div class="bg-sky-100 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                         <i class="fa-solid fa-credit-card fa-xl" style="color:magenta"></i>
+                         <h3 class="text-xl font-bold text-gray-800 m-3">Pagos Seguro | Online</h3>
+                         <p class="text-gray-600 font-bold text-sm leading-relaxed">Realiza pagos con tu entidad bancaría favorita con confianza.</p>
+                     </div>
+                     <div class="bg-sky-100 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                         <i class="fa-regular fa-user fa-xl"></i>
+                         <h3 class="text-xl font-bold text-gray-800 m-3">Atención al Cliente</h3>
+                         <p class="text-gray-600 font-bold text-sm leading-relaxed">Atenderemos tus dudas, inquietudes y ayudarte a elegir el mejor producto para ti con nuestro chat en vivo.</p>
+                     </div>
+             </div>
+         </section>
 
-            <section id="about-us" class="py-16 px-6 bg-white">
-                <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">¿Quiénes somos?</h2>
-                <p class="text-center text-gray-500 mb-12 max-w-xl mx-auto">
-                    Somos un equipo apasionado por llevar sabor y calidad a tu puerta en tiempo récord.
-                </p>
-
-                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                    {{-- Tarjeta 1: Misión --}}
-                    <div class="bg-orange-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="text-5xl mb-4">🍔</div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nuestra Misión</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Llevamos sabor y rapidez a cada rincón. Creemos que la buena comida no debe hacerte esperar.
-                        </p>
-                    </div>
-
-                    {{-- Tarjeta 2: Calidad --}}
-                    <div class="bg-orange-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="text-5xl mb-4">⭐</div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nuestra Calidad</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Ingredientes frescos seleccionados cada día. Sin compromisos en el sabor ni en la presentación.
-                        </p>
-                    </div>
-
-                    {{-- Tarjeta 3: Promesa --}}
-                    <div class="bg-orange-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="text-5xl mb-4">🚀</div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nuestra Promesa</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Entrega en menos de 30 minutos o tu próximo pedido tiene descuento. Así de seguros estamos.
-                        </p>
-                    </div>
-
-                </div>
-
-            </section>
-           
-            <section id="our-services" class="py-15 px-5 bg-white mt-5">
-                <h2 class="text-5xl text-center text-sky-500 mb-12 max-w-xl mx-auto">Nuestros Servicios Principales</h2>
-                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-
-
-
-                        <div class="bg-sky-100 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-                            <i class="fa-solid fa-truck fa-xl" style="color:lightskyblue"></i>
-                            <h3 class="text-xl font-bold text-gray-800 m-3">Envio a Domicilio</h3>
-                            <p class="text-gray-600 font-bold text-sm leading-relaxed">Nos especializamos en envios a Domicilios en toda la región de Neiva.</p>
-                        </div>
-
-                        
-                        <div class="bg-sky-100 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-                            <i class="fa-solid fa-credit-card fa-xl" style="color:magenta"></i>
-                            <h3 class="text-xl font-bold text-gray-800 m-3">Pagos Seguro | Online</h3>
-                            <p class="text-gray-600 font-bold text-sm leading-relaxed">Realiza pagos con tu entidad bancaría favorita con confianza.</p>
-                        </div>
-
-                        <div class="bg-sky-100 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-                            <i class="fa-regular fa-user fa-xl"></i>
-                            <h3 class="text-xl font-bold text-gray-800 m-3">Atención al Cliente</h3>
-                            <p class="text-gray-600 font-bold text-sm leading-relaxed">Atenderemos tus dudas, inquietudes y ayudarte a elegir el mejor producto para ti con nuestro chat en vivo.</p>
-                        </div>
-
-
-                </div>
-            </section>
-
+        @endsection
 
         <a href="https://wa.me/573177261647?text=Hola,%20me%20interesa%20hacer%20un%20pedido%20en%20Fast%C3%ADa%20Food%C3%ADa"
        target="_blank"
@@ -108,5 +94,3 @@
             </svg>
         </div>
     </a>
-    @endsection
-
